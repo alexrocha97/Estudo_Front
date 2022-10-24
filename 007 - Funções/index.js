@@ -134,3 +134,51 @@ console.log(opcaoCal.sobretracao(1, 2))
 // console.log(dener.sobreNome());
 // console.log(dener.name);
 // console.log(teste2.name);
+
+
+// Um closure ocorre quando normalmente quando uma função é declarada dentro do corpo de outra, e a função interior 
+// referencia variaveis locais de função exterior.
+
+function QualEseuNome(nome) {
+    const msg = `O seu nome é: ${nome}`
+    function SeuNome() {
+        return `${msg} -  ${nome}`
+    }
+    return SeuNome();
+}
+console.log(QualEseuNome("Alex Ventura"));
+
+// Um exemplo de closure, uma função que tem diversas funções dentro e não pode ser acessar fora, 
+// mas que acada uma faz executa sua tarefa e retorna o valor.
+function NovaCalculadora(num1, num2) 
+{
+    const msg = "Resultado:"
+
+    const soma = () => {
+        return `${msg} ${num1 + num2}`
+    }
+
+    const subtracao = () => {
+        return `${msg} ${num1 - num2}`
+    }
+
+    const multiplicacao = () => {
+        return `${msg} ${num1 * num2}`
+    }
+
+    const divisao = () => {
+        return `${msg} ${num1 / num2}`
+    }
+
+    return {
+        soma: soma(),
+        subtracao: subtracao(),
+        multiplicacao: multiplicacao(),
+        divisao: divisao()
+    };
+}
+
+
+console.log(NovaCalculadora(2, 5));
+console.log(NovaCalculadora(2, 5).soma);
+console.log(NovaCalculadora(2, 5).multiplicacao);
