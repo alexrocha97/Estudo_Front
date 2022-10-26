@@ -63,4 +63,20 @@ const h1 = document.querySelector("h1");
 // container.appendChild(newdiv);
 
 
-//
+// const newH2 = document.createElement("h2");
+// const paragrafo = document.querySelector(".paragrafo");
+
+// newH2.innerText = "Novo h2";
+
+
+// // container.insertBefore(newH2, paragrafo);
+// container.insertBefore(newH2, h1);
+
+
+// // after e before
+// const newp = document.createElement("p");
+// newp.innerText = "Olá Alex"
+// // container.after("Olá Alex");
+
+// // container.after(newp);
+// container.before(newp);
