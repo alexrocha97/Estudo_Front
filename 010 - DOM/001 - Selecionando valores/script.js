@@ -1,5 +1,9 @@
 "use strict";
 
+// Melhor uso é 
+// querySelect
+// querySelectAll => NodeList
+
 const h101 = document.querySelector('p');
 console.log(h1);
 
